@@ -1,0 +1,50 @@
+<body class="bg-gray-100">
+    <header class="bg-blue-700 text-white py-4">
+        <div class="container mx-auto">
+            <h1 class="text-3xl font-semibold text-center">Question Manager</h1>
+            <p class="mt-2 text-center">Generate and manage random questions easily.</p>
+        </div>
+    </header>
+    <main class="container mx-auto px-4 py-8">
+
+
+ <section class="bg-white rounded shadow-lg p-6 mb-8">
+            <h2 class="text-2xl font-semibold mb-4">Generate Random Question</h2>
+            <button id="generateBtn" class="bg-blue-500 text-white px-6 py-4 rounded hover:bg-blue-600 transition">Generate</button>
+            <div id="questionDisplay" class="mt-4 text-xl font-semibold"></div>
+        </section>
+
+
+      
+        <section class="bg-white rounded shadow-lg p-6 mb-8 border">
+            <h2 class="text-2xl font-semibold mb-4">Add a Question</h2>
+            <form id="addQuestionForm" class="flex">
+                <input type="text" id="questionInput" class="border p-4 flex-grow rounded-l focus:outline-none focus:border-blue-500" placeholder="Enter a question">
+                <button type="submit" id="addQuestionBtn" class="bg-green-500 text-white px-6 py-4 rounded-r hover:bg-green-600 transition">Add</button>
+            </form>
+        </section>
+        <section class="bg-white rounded shadow-lg p-6 mb-8">
+            <h2 class="text-2xl font-semibold mb-4">
+                <button id="questionsToggle" class="flex items-center focus:outline-none">
+                    <span>Questions</span>
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" class="h-6 w-6 ml-2">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+                    </svg>
+                </button>
+            </h2>
+            <div id="questionsSection" class="list-disc pl-6 space-y-2 hidden">
+                <ul id="questionsList">
+                    <!-- Saved questions go here -->
+                </ul>
+                <button id="clearAllBtn" class="bg-red-500 text-white px-6 py-4 mt-4 rounded hover:bg-red-600 transition">Clear All</button>
+            </div>
+        </section>
+       
+    </main>
+    <footer class="bg-black text-white py-4  ">
+        <div class=" mx-auto text-center">
+            <p>&copy; 2023 Question Manager. All rights reserved.</p>
+        </div>
+    </footer>
+    <script src="script.js"></script>
+</body>
