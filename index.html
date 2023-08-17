@@ -10,134 +10,138 @@
   </head>
 
   <body class="bg-gray-100 boxes-pattern">
-    <section class="">
-      <div
-        class="items-center px-8 py-12 mx-auto max-w-7xl lg:px-16 md:px-12 lg:py-24"
-      >
-        <div class="justify-center w-full text-center lg:p-10 max-auto">
-          <div class="justify-center w-full mx-auto">
-            <p
-              class="mt-8 font-bold text-transparent text-7xl sm:text-8xl bg-clip-text bg-gradient-to-r from-purple-400 to-pink-600 text-left sm:text-center "
-            >
-              Shuffled.
-            </p>
-            <p
-              class="max-w-xl mx-auto mt-4 text-lg tracking-tight text-gray-600"
-            >
-              A fun and easy way to effortlessly add, shuffle, and generate
-              questions.
-            </p>
-          </div>
-          <div
-            class="flex flex-col items-center justify-center max-w-xl gap-3 mx-auto mt-10 lg:flex-row"
-          >
-            <button
-              type="button"
-              class="text-white bg-black duration-200 hover:bg-[#24292F]/90 focus:ring-1 focus:outline-none focus:ring-[#24292F]/50 font-medium rounded-full w-full text-sm px-6 py-2.5 inline-flex justify-center sm:w-auto mr-2 mb-2"
-            >
-              Have fun &#10023;
-            </button>
-            <button
-              type="button"
-              class="hover:text-blue-400 duration-200 focus:ring-1 focus:outline-none focus:ring-[#24292F]/50 font-medium rounded-lg text-sm px-5 py-2.5 text-center inline-flex items-center mr-2 mb-2"
-            >
-              <svg
-                class="w-4 h-4 mr-2"
-                aria-hidden="true"
-                xmlns="http://www.w3.org/2000/svg"
-                fill="currentColor"
-                viewBox="0 0 20 20"
-              >
-                <path
-                  fill-rule="evenodd"
-                  d="M10 .333A9.911 9.911 0 0 0 6.866 19.65c.5.092.678-.215.678-.477 0-.237-.01-1.017-.014-1.845-2.757.6-3.338-1.169-3.338-1.169a2.627 2.627 0 0 0-1.1-1.451c-.9-.615.07-.6.07-.6a2.084 2.084 0 0 1 1.518 1.021 2.11 2.11 0 0 0 2.884.823c.044-.503.268-.973.63-1.325-2.2-.25-4.516-1.1-4.516-4.9A3.832 3.832 0 0 1 4.7 7.068a3.56 3.56 0 0 1 .095-2.623s.832-.266 2.726 1.016a9.409 9.409 0 0 1 4.962 0c1.89-1.282 2.717-1.016 2.717-1.016.366.83.402 1.768.1 2.623a3.827 3.827 0 0 1 1.02 2.659c0 3.807-2.319 4.644-4.525 4.889a2.366 2.366 0 0 1 .673 1.834c0 1.326-.012 2.394-.012 2.72 0 .263.18.572.681.475A9.911 9.911 0 0 0 10 .333Z"
-                  clip-rule="evenodd"
-                />
-              </svg>
-              Star on Github
-            </button>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <section class="w-[90%] mx-auto bg-red-200 rounded-2xl p-6 bg-white mb-8">
-      <div class="flex flex-col gap-6">
-        <h2 class="text-2xl font-semibold text-black text-centr">Question:</h2>
-        <div id="questionDisplay" class="text-lg font-regular text-gray-600">
-          Sure, here's a simple CSS example of a fading boxes pattern that
-          gradually fades in and out. This pattern will not show the boxes on
-          the sides, top, and bottom of the container:
-        </div>
-
-        <button
-          id="generateBtn"
-          class="text-white bg-black duration-200 hover:bg-[#24292F]/90 focus:ring-1 focus:outline-none focus:ring-[#24292F]/50 font-medium rounded-full text-sm px-6 py-2.5 mx-auto"
+    <div class="mx-4">
+      <section class="container max-w-6xl mx-auto rounded-2xl p-6 mb-8 mt-12">
+        <div
+          class=""
         >
-          Generate &#10147;
-        </button>
-      </div>
-    </section>
+          <div class="justify-center w-full text-center lg:p-10 max-auto">
+            <div class="justify-center w-full mx-auto">
+              <p
+                class="mt-8 font-bold text-transparent text-7xl sm:text-8xl bg-clip-text bg-gradient-to-r from-purple-400 to-pink-600 text-left sm:text-center"
+              >
+                Shuffled.
+              </p>
+              <p
+                class="max-w-xl mx-auto mt-4 text-lg tracking-tight text-gray-600"
+              >
+                A fun and easy way to effortlessly add, shuffle, and generate
+                questions.
+              </p>
+            </div>
+            <div
+              class="flex flex-col items-center justify-center max-w-xl gap-3 mx-auto mt-10 lg:flex-row"
+            >
+              <button
+                type="button"
+                class="text-white bg-black duration-200 hover:bg-[#24292F]/90 focus:ring-1 focus:outline-none focus:ring-[#24292F]/50 font-medium rounded-full w-full text-sm px-6 py-2.5 inline-flex justify-center sm:w-auto mr-2 mb-2 shadow-lg"
+              >
+                Have fun &#10023;
+              </button>
+              <button
+                type="button"
+                class="hover:text-blue-400 duration-200 focus:ring-1 focus:outline-none focus:ring-[#24292F]/50 font-medium rounded-lg text-sm px-5 py-2.5 text-center inline-flex items-center mr-2 mb-2"
+              >
+                <svg
+                  class="w-4 h-4 mr-2"
+                  aria-hidden="true"
+                  xmlns="http://www.w3.org/2000/svg"
+                  fill="currentColor"
+                  viewBox="0 0 20 20"
+                >
+                  <path
+                    fill-rule="evenodd"
+                    d="M10 .333A9.911 9.911 0 0 0 6.866 19.65c.5.092.678-.215.678-.477 0-.237-.01-1.017-.014-1.845-2.757.6-3.338-1.169-3.338-1.169a2.627 2.627 0 0 0-1.1-1.451c-.9-.615.07-.6.07-.6a2.084 2.084 0 0 1 1.518 1.021 2.11 2.11 0 0 0 2.884.823c.044-.503.268-.973.63-1.325-2.2-.25-4.516-1.1-4.516-4.9A3.832 3.832 0 0 1 4.7 7.068a3.56 3.56 0 0 1 .095-2.623s.832-.266 2.726 1.016a9.409 9.409 0 0 1 4.962 0c1.89-1.282 2.717-1.016 2.717-1.016.366.83.402 1.768.1 2.623a3.827 3.827 0 0 1 1.02 2.659c0 3.807-2.319 4.644-4.525 4.889a2.366 2.366 0 0 1 .673 1.834c0 1.326-.012 2.394-.012 2.72 0 .263.18.572.681.475A9.911 9.911 0 0 0 10 .333Z"
+                    clip-rule="evenodd"
+                  />
+                </svg>
+                Star on Github
+              </button>
+            </div>
+          </div>
+        </div>
+      </section>
 
-    <section class="w-[90%] mx-auto bg-red-200 rounded-2xl p-6 bg-white mb-8">
-      <h2 class="text-2xl font-semibold mb-4">Add a Question</h2>
-      <form id="addQuestionForm" class="mt-3">
-        <div class="flex flex-col gap-4 sm:flex-row">
-          <input
-            name="question"
-            type="text"
-            id="questionInput"
-            class="w-full px-4 py-3 text-sm placeholder-gray-400 bg-white border border-gray-300 rounded-full focus:ring-2 focus:ring-[#24292F] focus:border-[#24292F] transition"
-            placeholder="Enter Question"
-            required
-          />
+      <section class="max-w-6xl mx-auto rounded-2xl p-6 bg-white mb-8">
+        <div class="flex flex-col gap-6">
+          <h2 class="text-2xl font-semibold text-black text-centr">
+            Question:
+          </h2>
+          <div id="questionDisplay" class="text-lg font-regular text-gray-600">
+            Sure, here's a simple CSS example of a fading boxes pattern that
+            gradually fades in and out. This pattern will not show the boxes on
+            the sides, top, and bottom of the container:
+          </div>
 
           <button
-            type="submit"
-            id="addQuestionBtn"
-            class="bg-[#24292F] hover:bg-[#24292F]/90 text-white font-medium rounded-full text-sm px-6 py-2.5 focus:ring-2 focus:ring-[#24292F] focus:outline-none transition"
+            id="generateBtn"
+            class="text-white bg-black duration-200 hover:bg-[#24292F]/90 focus:ring-1 focus:outline-none focus:ring-[#24292F]/50 font-medium rounded-full text-sm px-6 py-2.5 mx-auto shadow-sm w-full sm:w-auto"
           >
-            Add&nbsp;Question&nbsp;&plus;
+            Generate &#10147;
           </button>
         </div>
-      </form>
-    </section>
+      </section>
 
-    <section class="w-[90%] mx-auto bg-red-200 rounded-2xl p-6 bg-white mb-8">
-      <h2 class="text-2xl font-semibold mb-4">
-        <button
-          id="questionsToggle"
-          class="flex items-center focus:outline-none"
-        >
-          <span>Questions</span>
-          <svg
-            xmlns="http://www.w3.org/2000/svg"
-            fill="none"
-            viewBox="0 0 24 24"
-            stroke="currentColor"
-            class="h-6 w-6 ml-2"
+      <section class="max-w-6xl mx-auto rounded-2xl p-6 bg-white mb-8">
+        <h2 class="text-2xl font-semibold mb-4">Add a Question</h2>
+        <form id="addQuestionForm" class="mt-3">
+          <div class="flex flex-col gap-4 sm:flex-row">
+            <input
+              name="question"
+              type="text"
+              id="questionInput"
+              class="w-full px-4 py-3 text-sm placeholder-gray-400 bg-white border border-gray-300 rounded-full focus:ring-2 focus:ring-[#24292F] focus:border-[#24292F] transition"
+              placeholder="Enter Question"
+              required
+            />
+
+            <button
+              type="submit"
+              id="addQuestionBtn"
+              class="bg-[#24292F] hover:bg-[#24292F]/90 text-white font-medium rounded-full text-sm px-6 py-2.5 focus:ring-2 focus:ring-[#24292F] focus:outline-none transition shadow-sm"
+            >
+              Add&nbsp;Question&nbsp;&plus;
+            </button>
+          </div>
+        </form>
+      </section>
+
+      <section class="max-w-6xl mx-auto rounded-2xl p-6 bg-white mb-8">
+        <h2 class="text-2xl font-semibold mb-4">
+          <button
+            id="questionsToggle"
+            class="flex items-center focus:outline-none"
           >
-            <path
-              stroke-linecap="round"
-              stroke-linejoin="round"
-              stroke-width="2"
-              d="M19 9l-7 7-7-7"
-            ></path>
-          </svg>
-        </button>
-      </h2>
-      <div id="questionsSection" class="list-disc pl-6 space-y-2 hidden">
-        <ul id="questionsList">
-          <!-- Saved questions go here -->
-        </ul>
-        <button
-          id="clearAllBtn"
-          class="bg-red-500 text-white px-6 py-4 mt-4 rounded hover:bg-red-600 transition"
-        >
-          Clear All
-        </button>
-      </div>
-    </section>
+            <span>Questions</span>
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              fill="none"
+              viewBox="0 0 24 24"
+              stroke="currentColor"
+              class="h-6 w-6 ml-2"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+                d="M19 9l-7 7-7-7"
+              ></path>
+            </svg>
+          </button>
+        </h2>
+        <div id="questionsSection" class="list-disc pl-6 space-y-2 hidden">
+          <ul id="questionsList">
+            <!-- Saved questions go here -->
+          </ul>
+          <button
+            id="clearAllBtn"
+            class="bg-red-500 text-white px-6 py-2 mt-4 rounded-full hover:bg-red-600 transition"
+          >
+            Clear All
+          </button>
+        </div>
+      </section>
+    </div>
 
     <script
       type="module"
