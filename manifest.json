@@ -1,0 +1,33 @@
+{
+    "name": "My PWA",
+    "short_name": "PWA",
+    "description": "My Progressive Web App",
+    "start_url": "/",
+    "display": "standalone",
+    "background_color": "#ffffff",
+    "theme_color": "#317EFB",
+    "icons": [
+      {
+        "src": "/icon1.png",
+        "sizes": "192x192",
+        "type": "image/png",
+        "purpose": "any maskable"
+      },
+      {
+        "src": "/icon2.png",
+        "sizes": "150x150",
+        "type": "image/png"
+      },
+      {
+        "src": "/icon3.png",
+        "sizes": "200x200",
+        "type": "image/png"
+      },
+      {
+        "src": "/icon4.png",
+        "sizes": "512x512",
+        "type": "image/png"
+      }
+    ]
+  }
+  
