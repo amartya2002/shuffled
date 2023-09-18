@@ -12,9 +12,7 @@
   <body class="bg-gray-100 boxes-pattern">
     <div class="mx-4">
       <section class="container max-w-6xl mx-auto rounded-2xl p-6 mb-8 mt-12">
-        <div
-          class=""
-        >
+        <div class="">
           <div class="justify-center w-full text-center lg:p-10 max-auto">
             <div class="justify-center w-full mx-auto">
               <p
@@ -33,17 +31,18 @@
               class="flex flex-col items-center justify-center max-w-xl gap-3 mx-auto mt-10 lg:flex-row"
             >
               <a
-              href="https://www.youtube.com/watch?v=dQw4w9WgXcQ" target="_blank"
+                href="https://www.youtube.com/watch?v=dQw4w9WgXcQ"
+                target="_blank"
                 type="button "
-                class="text-white bg-black duration-200  font-medium rounded-full w-full text-sm px-6 py-2.5 inline-flex justify-center sm:w-auto mr-2 mb-2 shadow-lg  sm:active:scale-110 sm:hover:scale-105 active:scale-110  cursor-pointer
-                "
+                class="text-white bg-black duration-200 font-medium rounded-full w-full text-sm px-6 py-2.5 inline-flex justify-center sm:w-auto mr-2 mb-2 shadow-lg sm:active:scale-110 sm:hover:scale-105 active:scale-110 cursor-pointer"
               >
                 Have fun &#10023;
               </a>
               <a
-              href="https://github.com/amartya2002/shuffled" target="_blank"
+                href="https://github.com/amartya2002/shuffled"
+                target="_blank"
                 type="button"
-                class="hover:text-blue-400 duration-200 focus:ring-1 focus:outline-none focus:ring-[#24292F]/50 font-medium rounded-lg text-sm px-5 py-2.5 text-center inline-flex items-center mr-2 mb-2 sm:active:scale-110 sm:hover:scale-105 active:scale-110  cursor-pointer"
+                class="hover:text-blue-400 duration-200 focus:ring-1 focus:outline-none focus:ring-[#24292F]/50 font-medium rounded-lg text-sm px-5 py-2.5 text-center inline-flex items-center mr-2 mb-2 sm:active:scale-110 sm:hover:scale-105 active:scale-110 cursor-pointer"
               >
                 <svg
                   class="w-4 h-4 mr-2"
@@ -65,10 +64,10 @@
         </div>
       </section>
 
-      <section class="max-w-6xl mx-auto rounded-2xl p-6 bg-white mb-8">
+      <section class="max-w-6xl mx-auto rounded-2xl p-9 bg-white mb-8">
         <div class="flex flex-col gap-6">
           <h2 class="text-2xl font-semibold text-black text-centr">
-            Question:
+            Questions
           </h2>
           <div id="questionDisplay" class="text-lg font-regular text-gray-600">
             Click 'generate' to show.
@@ -76,22 +75,22 @@
 
           <button
             id="generateBtn"
-            class="text-white bg-black duration-200 hover:bg-[#24292F]/90 focus:ring-1 focus:outline-none focus:ring-[#24292F]/50 font-medium rounded-full text-sm px-6 py-2.5 mx-auto shadow-sm w-full sm:w-auto sm:active:scale-110 sm:hover:scale-105 active:scale-110 "
+            class="text-white bg-black duration-200 hover:bg-[#24292F]/90 focus:ring-1 focus:outline-none focus:ring-[#24292F]/50 font-medium rounded-full text-sm px-6 py-2.5 mx-auto shadow-sm w-full sm:w-auto sm:active:scale-110 sm:hover:scale-105 active:scale-110"
           >
             Generate &#10147;
           </button>
         </div>
       </section>
 
-      <section class="max-w-6xl mx-auto rounded-2xl p-6 bg-white mb-8">
-        <h2 class="text-2xl font-semibold mb-4">Add a Question</h2>
+      <section class="max-w-6xl mx-auto rounded-2xl p-8 bg-white mb-8">
+        <h2 class="text-2xl font-semibold mb-4">Add a Question &#x2b;</h2>
         <form id="addQuestionForm" class="mt-3">
           <div class="flex flex-col gap-4 sm:flex-row">
             <input
               name="question"
               type="text"
               id="questionInput"
-              class="w-full px-4 py-3 text-sm placeholder-gray-400 bg-white border border-gray-300 rounded-full focus:ring-1 focus:ring-[#24292F]  transition"
+              class="w-full px-4 py-3 text-sm placeholder-gray-400 bg-white border border-gray-300 rounded-full focus:ring-1 focus:ring-[#24292F] transition"
               placeholder="Enter Question"
               required
             />
@@ -99,7 +98,7 @@
             <button
               type="submit"
               id="addQuestionBtn"
-              class="bg-[#24292F] hover:bg-[#24292F]/90 text-white font-medium rounded-full text-sm px-6 py-2.5  shadow-sm  sm:active:scale-110 sm:hover:scale-105 active:scale-110 duration-200 "
+              class="text-white bg-black duration-200 hover:bg-[#24292F]/90 focus:ring-1 focus:outline-none focus:ring-[#24292F]/50 font-medium rounded-full text-sm px-6 py-2.5 mx-auto shadow-sm w-full sm:w-auto sm:active:scale-110 sm:hover:scale-105 active:scale-110"
             >
               Add&nbsp;Question&nbsp;&plus;
             </button>
@@ -107,39 +106,27 @@
         </form>
       </section>
 
-      <section class="max-w-6xl mx-auto rounded-2xl p-6 bg-white mb-8">
-        <h2 class="text-2xl font-semibold mb-4">
+      <section class="max-w-6xl mx-auto rounded-2xl p-8 bg-white mb-8">
+        <div class="flex-col flex">
+          <h2 class="text-2xl font-semibold mb-4">
+            Saved Questions <button id="questionsToggle">&#x2193;</button>
+          </h2>
+
+          <div id="questionsSection" class="list-disc space-y-6 hidden">
+            <div class="pl-2">
+              <ul id="questionsList">
+                <!-- Saved questions go here -->
+              </ul>
+            </div>
+
+           
+          </div>
           <button
-            id="questionsToggle"
-            class="flex items-center focus:outline-none"
-          >
-            <span>Questions</span>
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              fill="none"
-              viewBox="0 0 24 24"
-              stroke="currentColor"
-              class="h-6 w-6 ml-2"
-            >
-              <path
-                stroke-linecap="round"
-                stroke-linejoin="round"
-                stroke-width="2"
-                d="M19 9l-7 7-7-7"
-              ></path>
-            </svg>
-          </button>
-        </h2>
-        <div id="questionsSection" class="list-disc pl-6 space-y-2 hidden">
-          <ul id="questionsList">
-            <!-- Saved questions go here -->
-          </ul>
-          <button
-            id="clearAllBtn"
-            class="bg-red-500 text-white px-6 py-2 mt-4 rounded-full hover:bg-red-600 sm:active:scale-110 sm:hover:scale-105 active:scale-110 duration-200"
-          >
-            Clear All
-          </button>
+          id="clearAllBtn"
+          class="text-white bg-red-500 duration-200 hover:bg-red-500/90 focus:ring-1 focus:outline-none focus:ring-[#24292F]/50 font-medium rounded-full text-sm px-6 py-2.5  shadow-sm ml-auto sm:active:scale-110 sm:hover:scale-105 active:scale-110 "
+        >
+          Clear Saved &#x2718;
+        </button>
         </div>
       </section>
     </div>

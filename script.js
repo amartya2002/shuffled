@@ -26,8 +26,9 @@ document.addEventListener("DOMContentLoaded", () => {
         questions.forEach((question, index) => {
             const listItem = document.createElement("li");
             listItem.innerHTML = `
-                <span>${question}</span>
-                <button class="ml-2 text-red-500 delete-btn" data-index="${index}">Delete</button>
+                
+                <button class= text-red-500 delete-btn" data-index="${index}">&#x2718;</button>
+                <span class="text-gray-600">${question}</span>
             `;
             questionsList.appendChild(listItem);
         });
