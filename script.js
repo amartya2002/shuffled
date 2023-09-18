@@ -28,7 +28,7 @@ document.addEventListener("DOMContentLoaded", () => {
             listItem.innerHTML = `
                 
                 <button class= text-red-500 delete-btn" data-index="${index}">&#x2718;</button>
-                <span class="text-gray-600">${question}</span>
+                <span class="text-gray-500">${question}</span>
             `;
             questionsList.appendChild(listItem);
         });
@@ -112,3 +112,44 @@ document.addEventListener("DOMContentLoaded", () => {
             .catch(alert);
     });
 });
+
+
+
+
+// Get the necessary DOM elements
+const toggleButton = document.getElementById('toggleButton');
+const webcamSection = document.getElementById('webcamSection');
+const webcam = document.getElementById('webcam');
+
+// Function to toggle webcam section
+function toggleWebcamSection() {
+    if (webcamSection.style.display === 'none' || webcamSection.style.display === '') {
+        // Open the section and start the webcam
+        containerSection.style.display = 'block';
+        webcamSection.style.display = 'block';
+
+        // Access the webcam
+        navigator.mediaDevices.getUserMedia({ video: true })
+            .then((stream) => {
+                webcam.srcObject = stream;
+            })
+            .catch((error) => {
+                console.error('Error accessing the webcam:', error);
+            });
+    } else {
+        // Close the section and stop the webcam
+        containerSection.style.display = 'none';
+        webcamSection.style.display = 'none';
+
+        if (webcam.srcObject) {
+            const tracks = webcam.srcObject.getTracks();
+            tracks.forEach((track) => {
+                track.stop();
+            });
+            webcam.srcObject = null;
+        }
+    }
+}
+
+// Add click event listener to the toggle button
+toggleButton.addEventListener('click', toggleWebcamSection);
