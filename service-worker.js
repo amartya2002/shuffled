@@ -3,13 +3,13 @@
 const CACHE_NAME = 'my-pwa-cache';
 const urlsToCache = [
   '/',
-  '/index.html',
-  '/style.css',
-  '/script.js',
-  '/icon1.png',
-  '/icon2.png',
-  '/icon3.png',
-  '/icon4.png'
+  '/shuffled/index.html',
+  '/shuffled/style.css',
+  '/shuffled/script.js',
+  '/shuffled/icon1.png',
+  '/shuffled/icon2.png',
+  '/shuffled/icon3.png',
+  '/shuffled/icon4.png'
 
 ];
 
