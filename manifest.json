@@ -2,7 +2,7 @@
     "name": "My PWA",
     "short_name": "PWA",
     "description": "My Progressive Web App",
-    "start_url": "/shuffled/",
+    "start_url": "/",
     "display": "standalone",
     "background_color": "#317EFB",
     "theme_color": "#317EFB",
