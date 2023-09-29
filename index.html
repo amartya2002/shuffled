@@ -6,11 +6,13 @@
     <meta name="theme-color" content="#317EFB"/>
     
   
-    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- <script src="https://cdn.tailwindcss.com"></script> -->
+    
 
-    <link rel="stylesheet" href="styles.css" />
+    <link rel="stylesheet" href="styles/output.css" />
     <title>Shuffled</title>
-    <link rel="stylesheet" href="style.css" />
+
+    npx tailwindcss -i ./styles/input.css -o ./styles/output.css --watch
    
   </head>
 
@@ -262,9 +264,9 @@
     ></script>
     <script src="ui.js"></script>
 
-    <script src="script.js"></script>
-    <script src="clock.js"></script>
-    <script src="new-clock.js"></script>
+    <script src="scripts/main.js"></script>
+    <script src="scripts/clock.js"></script>
+    <script src="scripts/new-clock.js"></script>
 
 
 
