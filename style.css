@@ -1,5 +1,15 @@
 .boxes-pattern {
     background-image:
+        linear-gradient(rgba(56, 56, 56, 0.5) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(56, 56, 56, 0.5) 1px, transparent 1px),
+        linear-gradient(rgba(56, 56, 56, 0.5) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(56, 56, 56, 0.5) 1px, transparent 1px);
+    background-size: 20px 20px;
+    background-position: 0 0, 0 0, 10px 10px, 10px 10px;
+}
+
+.boxes-pattern-white {
+    background-image:
         linear-gradient(rgba(229, 231, 235, 0.5) 1px, transparent 1px),
         linear-gradient(90deg, rgba(229, 231, 235, 0.5) 1px, transparent 1px),
         linear-gradient(rgba(229, 231, 235, 0.5) 1px, transparent 1px),
@@ -7,8 +17,6 @@
     background-size: 20px 20px;
     background-position: 0 0, 0 0, 10px 10px, 10px 10px;
 }
-
-
 
 
 .cool-boxes-pattern {
@@ -60,3 +68,25 @@ background-image:  linear-gradient(#f6f6f6 1px, transparent 1px), linear-gradien
 background-size: 20px 20px;
 }
 
+/* styles.css */
+.btn-start,
+.btn-pause,
+.btn-stop {
+    padding: 12px 0;
+    font-size: 1rem;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.btn-start {
+    background-color: #4CAF50;
+    color: white;
+}
+
+.btn-pause,
+.btn-stop {
+    background-color: #FFC107;
+    color: white;
+}
