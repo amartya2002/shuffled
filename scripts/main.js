@@ -7,6 +7,16 @@ document.addEventListener("DOMContentLoaded", () => {
     const generateBtn = document.getElementById("generateBtn");
     const questionDisplay = document.getElementById("questionDisplay");
     const questionInput = document.getElementById("questionInput");
+    const categorySelect = document.getElementById("categorySelect");
+
+    const categoryInput = document.getElementById("categoryInput");
+
+
+
+    const getSelectedCategory = () => {
+        const selectedCategory = categoryInput.value.trim();
+        return selectedCategory || "All";
+    };
 
     let questions = JSON.parse(localStorage.getItem("questions")) || [];
     let shuffledQuestions = shuffleArray(questions);
@@ -23,16 +33,22 @@ document.addEventListener("DOMContentLoaded", () => {
 
     const displayQuestions = () => {
         questionsList.innerHTML = "";
-        questions.forEach((question, index) => {
+        questions.forEach((questionObject, index) => {
             const listItem = document.createElement("li");
             listItem.innerHTML = `
-                
-                <button class= "text-red-500 delete-btn" data-index="${index}">&#x2718;</button>
-                <span class="text-gray-500  ">${question}</span>
+            <div class="flex space-x-4">
+            
+                <button class="text-red-500 delete-btn" data-index="${index}">&#x2718;</button>
+
+                <p class="text-gray-500 ">${questionObject.question}  <span class=" dark:bg-white bg-black   rounded  text-sm px-1">${questionObject.category}</span>
+                </p>
+
+                </div>
             `;
             questionsList.appendChild(listItem);
         });
     };
+    
 
     const generateRandomQuestion = () => {
         if (shuffledQuestions.length === 0) {
@@ -40,7 +56,7 @@ document.addEventListener("DOMContentLoaded", () => {
             return;
         }
 
-        questionDisplay.textContent = shuffledQuestions[questionIndex];
+        questionDisplay.textContent = shuffledQuestions[questionIndex].question;
         questionIndex = (questionIndex + 1) % shuffledQuestions.length;
     };
 
@@ -49,15 +65,18 @@ document.addEventListener("DOMContentLoaded", () => {
     addQuestionForm.addEventListener("submit", (event) => {
         event.preventDefault();
         const newQuestion = questionInput.value.trim();
+        const category = getSelectedCategory();
         if (newQuestion !== "") {
-            questions.push(newQuestion);
+            questions.push({ question: newQuestion, category: category });
             localStorage.setItem("questions", JSON.stringify(questions));
-            shuffledQuestions = shuffleArray(questions);
+            shuffledQuestions = shuffleArray(questions); // Shuffle the entire array of question objects
             questionInput.value = "";
+            categoryInput.value = "";
             questionIndex = 0;
             displayQuestions();
         }
     });
+    
 
     questionsList.addEventListener("click", (event) => {
         if (event.target.classList.contains("delete-btn")) {
