@@ -27,7 +27,7 @@ document.addEventListener("DOMContentLoaded", () => {
             const listItem = document.createElement("li");
             listItem.innerHTML = `
                 
-                <button class= text-red-500 delete-btn" data-index="${index}">&#x2718;</button>
+                <button class= "text-red-500 delete-btn" data-index="${index}">&#x2718;</button>
                 <span class="text-gray-500  ">${question}</span>
             `;
             questionsList.appendChild(listItem);
