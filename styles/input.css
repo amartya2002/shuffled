@@ -110,3 +110,23 @@
     background-color: #FFC107;
     color: white;
 }
+
+.categorySelect {
+    width: 200px; /* Set the width of the select element */
+    padding: 10px; /* Set padding inside the select box */
+    font-size: 16px; /* Set font size */
+    border: 1px solid #ccc; /* Set border */
+    border-radius: 5px; /* Set border radius for rounded corners */
+    background-color: #fff; /* Set background color */
+    color: #ff2d2d; /* Set text color */
+}
+
+.categorySelect:hover {
+    border-color: #007bff; /* Change border color on hover */
+}
+
+.categorySelect:focus {
+    outline: none; /* Remove outline on focus */
+    border-color: #007bff; /* Change border color on focus */
+    box-shadow: 0 0 5px rgba(0, 123, 255, 0.5); /* Add box shadow on focus */
+}
